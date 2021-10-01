@@ -33,7 +33,7 @@ function addPagination(list) {
    firstButton.className = 'active'
 
    buttons.addEventListener('click', (e) => {
-      let buttons = document.querySelectorAll('.link-list li')
+      buttons = document.querySelectorAll('.link-list li')
 
       //Loop over the array of link buttons and if any button has the active class, remove it.
       for (let i = 0; i < buttons.length; i++) {
