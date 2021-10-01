@@ -20,22 +20,22 @@ function showPage(list, page) {
 //This function will create and insert/append the elements needed for the pagination buttons
 function addPagination(list) {
    let numberOfPaginationButtons = Math.ceil(list.length / 9)
-   let buttons = document.querySelector('.link-list')
-   buttons.innerHTML = ''
+   let buttonsContainer = document.querySelector('.link-list')
+   buttonsContainer.innerHTML = ''
 
    let i = 1
    while (i <= numberOfPaginationButtons) {
-      buttons.insertAdjacentHTML('beforeend', `<li><button type="button">${i}</button></li>`)
+      buttonsContainer.insertAdjacentHTML('beforeend', `<li><button type="button">${i}</button></li>`)
       i++
    }
 
    let firstButton = document.querySelector('button')
    firstButton.className = 'active'
 
-   buttons.addEventListener('click', (e) => {
+   buttonsContainer.addEventListener('click', (e) => {
       buttons = document.querySelectorAll('.link-list li button')
 
-      //Loop over the array of buttons to remove the active class from non-active buttons
+      //Loop over the nodelist of buttons to remove the active class from non-active buttons
       for (let i = 0; i < buttons.length; i++) {
          if (buttons[i].className === 'active') {
             buttons[i].classList.remove('active')
