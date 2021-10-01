@@ -1,4 +1,4 @@
-// This function will create and insert / append the elements needed to display a "page" of nine students
+// This function will create and insert / append the elements needed to display a "page" of 9 students
 function showPage(list, page) {
    let startIndex = (page * 9) - 9
    let endIndex = page * 9
@@ -33,12 +33,12 @@ function addPagination(list) {
    firstButton.className = 'active'
 
    buttons.addEventListener('click', (e) => {
-      let buttons = document.querySelectorAll('.link-list li')
+      let linkList = document.querySelectorAll('.link-list li')
 
       //Loop over the array of link buttons and if any button has the active class, remove it.
-      for (let i = 0; i < buttons.length; i++) {
-         if (buttons[i].firstElementChild.className === 'active') {
-            buttons[i].firstElementChild.classList.remove('active')
+      for (let i = 0; i < linkList.length; i++) {
+         if (linkList[i].firstElementChild.className === 'active') {
+            linkList[i].firstElementChild.classList.remove('active')
          }
       }
 
