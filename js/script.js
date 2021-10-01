@@ -1,4 +1,4 @@
-// This function will create and insert / append the elements needed to display a "page" of 9 students
+// This function will create and insert/append the elements needed to display a "page" of 9 students
 function showPage(list, page) {
    let startIndex = (page * 9) - 9
    let endIndex = page * 9
@@ -43,7 +43,7 @@ function addPagination(list) {
       }
 
       e.target.className = 'active'
-      //Select the number of the clicked page to pass to the showPage function
+
       let clickedPage = parseInt(e.target.innerText)
       showPage(list, clickedPage)
    })
