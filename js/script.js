@@ -43,7 +43,7 @@ function addPagination(list) {
       }
 
       e.target.className = 'active'
-      //Select the number of the page that was clicked to pass to the showPage function
+      //Select the number of the clicked page button to pass to the showPage function
       let clickedPage = parseInt(e.target.innerText)
       showPage(list, clickedPage)
    })
