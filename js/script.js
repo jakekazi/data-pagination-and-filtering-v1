@@ -33,17 +33,17 @@ function addPagination(list) {
    firstButton.className = 'active'
 
    buttons.addEventListener('click', (e) => {
-      let linkList = document.querySelectorAll('.link-list li')
+      buttons = document.querySelectorAll('.link-list li button')
 
-      //Loop over the array of link buttons and if any button has the active class, remove it.
-      for (let i = 0; i < linkList.length; i++) {
-         if (linkList[i].firstElementChild.className === 'active') {
-            linkList[i].firstElementChild.classList.remove('active')
+      //Loop over the array of buttons to remove the active class from non-active buttons
+      for (let i = 0; i < buttons.length; i++) {
+         if (buttons[i].className === 'active') {
+            buttons[i].classList.remove('active')
          }
       }
 
       e.target.className = 'active'
-      //Select the number of the page that was clicked to pass to the showPage function
+      //Select the number of the clicked page to pass to the showPage function
       let clickedPage = parseInt(e.target.innerText)
       showPage(list, clickedPage)
    })
