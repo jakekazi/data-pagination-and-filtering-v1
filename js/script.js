@@ -44,6 +44,7 @@ function addPagination(list) {
 
       e.target.className = 'active'
 
+      
       let clickedPage = parseInt(e.target.innerText)
       showPage(list, clickedPage)
    })
